@@ -44,22 +44,7 @@ The above packages are needed be installed in order to run SeedBin. They can dow
 The file named cutoff.xls must be localized at the same directory of SeedBin. it contains the cutoffs for seeding and merging.
 
 ## Usage ##
-The following arguments must be provided: 
-  -fafile <s>: fasta file containing scaffolds
-  -depthfile <s>: the file containing depths for scaffolds
-  -tablefile <s>: the file containing SCG type and their Scaffolds
-The following arguments are optional:
-  -seedfile <s>: the file containing seeds
-  -nb_process <i>: the number of threads to be used, the default is 200
-  -fold <f>: the fold for computing depth range
-  -minlen <i>: the minimual length of scaffold, not including Ns,the default is 0
-  -outdir <s>: the output directory
-  -LargeLen <i>: the minimual length of large scaffold derived seeds, the default is 200,000
-  -SmallLen <i>: the minimual length of small scaffold derived seeds, the default is 100,000
-  -BinLen <i>: the minimual length of bins, the default is 500,000
-  -scgNum <i>: the minimual number of scgs which can be considered as an bin, the default is 7
-  -scgNum4bin <i>: the minimual number of scgs which can be considered as an final bin after merging, the default is 10
-  -help: show the help message
+The following arguments must be provided:
   
   
 ## Coverage calculation ##
