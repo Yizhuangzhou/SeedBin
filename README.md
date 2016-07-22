@@ -38,7 +38,10 @@ threads::shared
 
 POSIX
 
-The above packages are needed be installed in order to run SeedBin. They can downloaded from http://www.cpan.org/
+The above packages are needed be installed in order to run SeedBin. They can downloaded from http://www.cpan.org/. Please note that Statistics packages are included in the same directory of SeedBin. 
+
+## Cutoffs for seeding and mergeing ##
+The file named cutoff.xls must be localized at the same directory of SeedBin. it contains the cutoffs for seeding and merging. 
 
 ## Support ##
 If you are having issues, please email me via zhouyizhuang3@163.com
