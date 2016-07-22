@@ -54,9 +54,9 @@ The following arguments must be provided:
 The following arguments are optional:
   -seedfile \<s\>\: the file containing seeds
   
-  -nb_process \<i\>\: the number of threads to be used, the default is 200
+  -nb_process \<i\>\: the number of threads to be used, the default is 20
   
-  -fold \<f\>\: the fold for computing depth range
+  -fold \<f\>\: the fold for computing depth range, the default is 2.58
   
   -minlen \<i\>\: the minimual length of scaffold, not including Ns,the default is 0
   
