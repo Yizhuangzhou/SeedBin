@@ -41,7 +41,12 @@ POSIX
 The above packages are needed be installed in order to run SeedBin. They can downloaded from http://www.cpan.org/. Please note that Statistics packages are included in the same directory of SeedBin. 
 
 ## Cutoffs for seeding and mergeing ##
-The file named cutoff.xls must be localized at the same directory of SeedBin. it contains the cutoffs for seeding and merging. 
+The file named cutoff.xls must be localized at the same directory of SeedBin. it contains the cutoffs for seeding and merging.
+
+## Coverage calculation ##
+After assembly we map the reads of each sample back to the assembly using soap (http://soap.genomics.org.cn/). Of course, you can use other mapping software such as bowtie2. Then you can use soap.coverage (http://soap.genomics.org.cn/) to calculate base coverage. Finally, use Scripts/depth_mean_rawdepth.pl to calculate coverage file for -depthfile. There is one example in Scripts/example/. The first parameter for Scripts/depth_mean_rawdepth.pl is a file with format as:
+<file path><tab><trimmed length>
+Please note the trimmed length for both end is very similar to the read length of Illimula read
 
 ## Support ##
 If you are having issues, please email me via zhouyizhuang3@163.com
