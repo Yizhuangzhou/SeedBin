@@ -45,9 +45,9 @@ The file named cutoff.xls must be localized at the same directory of SeedBin. it
 
 ## Usage ##
 The following arguments must be provided:
-  -fafile \: fasta file containing scaffolds
-  -depthfile\: the file containing depths for scaffolds
-  -tablefile \<s\>\: the file containing SCG type and their Scaffolds
+  -fafile \: fasta file containing scaffolds\n
+  -depthfile\: the file containing depths for scaffolds\n
+  -tablefile \<s\>\: the file containing SCG type and their Scaffolds\n
   
 ## Coverage calculation ##
 After assembly we map the reads of each sample back to the assembly using soap (http://soap.genomics.org.cn/). Of course, you can use other mapping software such as bowtie2. Then you can use soap.coverage (http://soap.genomics.org.cn/) to calculate base coverage. Finally, use Scripts/depth_mean_rawdepth.pl to calculate coverage file for -depthfile. There is one example in Scripts/example/. The first parameter for Scripts/depth_mean_rawdepth.pl is a file with format that [file path] and [trimmed length] separated by tab 
