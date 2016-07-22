@@ -78,7 +78,7 @@ After assembly we map the reads of each sample back to the assembly using soap (
 Please note the trimmed length for both end is very similar to the read length of Illimula read. 
 
 ## Generation of SCG table ##
-
+use Scripts/SCGtype_SCGscaffoldDepth.pl to generate SCG table for -tablefile. To do this, we also need to install two other softwares including FragGeneScan (http://omics.informatics.indiana.edu/FragGeneScan/) and hmmsearch (http://hmmer.janelia.org/). 
 
 ## Support ##
 If you are having issues, please email me via zhouyizhuang3@163.com
