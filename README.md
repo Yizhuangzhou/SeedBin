@@ -19,14 +19,23 @@ If you use SeedBin in your publication, please cite:
 ## Perl Packages ##
 
 Getopt::Long
+
 File::Basename
+
 FindBin
+
 lib
+
 Statistics::Distributions
+
 Cwd
+
 File::Path
+
 threads
+
 threads::shared
+
 POSIX
 
 The above packages are needed be installed in order to run SeedBin. They can downloaded from http://www.cpan.org/
