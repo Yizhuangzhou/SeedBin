@@ -478,8 +478,9 @@ open(OF,">$outdir/largeScaffoldSeed_CovInterval.xls")||die;
 foreach my $seed (@totalseed) {
 	print OF "$seed";
 	foreach my $index (@CovIndex){
-		print OF "\t$seedmin{$seed}{$index}\t$seedmax{$seed}{$index}\n";
+		print OF "\t$seedmin{$seed}{$index}\t$seedmax{$seed}{$index}";
 	}
+	print OF "\n";
 }
 close OF;
 my $n=scalar @totalseed;
@@ -4125,20 +4126,21 @@ sub usage{
 Name
 	$0
 Usage
-	all options except -help option must be used 
-	-fafile <s>: fasta file containing scaffolds
+	The following arguments must be provided:
+	-fafile <s>: fasta file containing scaffolds assembled from metagenomic reads
 	-depthfile <s>: the file containing depths for scaffolds
 	-tablefile <s>: the file containing SCG type and their Scaffolds
+	The following arguments are optional:
 	-seedfile <s>: the file containing seeds
-	-nb_process <i>: the number of threads to be used, the default is 200
-	-fold <f>: the fold for computing depth range
-	-minlen <i>: the minimual length of scaffold, not including Ns,the default is 0
+	-nb_process <i>: the number of threads to be used, the default is 20
+	-fold <f>: the fold for computing depth range, the default is 2.58
+	-minlen <i>: the minimal length of scaffold, not including Ns,the default is 0
 	-outdir <s>: the output directory
-	-LargeLen <i>: the minimual length of large scaffold derived seeds, the default is 200,000
-	-SmallLen <i>: the minimual length of small scaffold derived seeds, the default is 100,000
-	-BinLen <i>: the minimual length of bins, the default is 500,000
-	-scgNum <i>: the minimual number of scgs which can be considered as an bin, the default is 7
-	-scgNum4bin <i>: the minimual number of scgs which can be considered as an final bin after merging, the default is 10
+	-LargeLen <i>: the minimal length of large scaffold derived seeds, the default is 200,000
+	-SmallLen <i>: the minimal length of small scaffold derived seeds, the default is 100,000
+	-BinLen <i>: the minimal length of bins, the default is 500,000
+	-scgNum <i>: the minimal number of scgs which can be considered as an bin, the default is 7
+	-scgNum4bin <i>: the minimal number of scgs which can be considered as an final bin after merging, the default is 10
 	-help: show the help message
 USAGE
 }
