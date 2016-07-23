@@ -16,75 +16,8 @@ If you use SeedBin in your publication, please cite:
 
 •	Small scaffolds are binned by Naïve Bayesian classifier
 
-## Perl Packages ##
-
-Getopt::Long
-
-File::Basename
-
-FindBin
-
-lib
-
-Statistics::Distributions
-
-Cwd
-
-File::Path
-
-threads
-
-threads::shared
-
-POSIX
-
-The above packages are needed be installed in order to run SeedBin.pl. They can downloaded from http://www.cpan.org/. Please note that Statistics packages are included in the same directory of SeedBin. 
-
-## Cutoffs for seeding and mergeing ##
-The file named cutoff.xls must be localized at the same directory of SeedBin.pl. it contains the cutoffs for seeding and merging.
-
-## Usage ##
-The following arguments must be provided:
-  -fafile \: fasta file containing scaffolds
-  
-  -depthfile\: the file containing depths for scaffolds
-  
-  -tablefile \<s\>\: the file containing SCG type and their Scaffolds
-  
-The following arguments are optional:
-  -seedfile \<s\>\: the file containing seeds
-  
-  -nb_process \<i\>\: the number of threads to be used, the default is 20
-  
-  -fold \<f\>\: the fold for computing depth range, the default is 2.58
-  
-  -minlen \<i\>\: the minimual length of scaffold, not including Ns,the default is 0
-  
-  -outdir \<s\>\: the output directory
-  
-  -LargeLen \<i\>\: the minimual length of large scaffold derived seeds, the default is 200,000
-  
-  -SmallLen \<i\>\: the minimual length of small scaffold derived seeds, the default is 100,000
-  
-  -BinLen \<i\>\: the minimual length of bins, the default is 500,000
-  
-  -scgNum \<i\>\: the minimual number of scgs which can be considered as an bin, the default is 7
-  
-  -scgNum4bin \<i\>\: the minimual number of scgs which can be considered as an final bin after merging, the default is 10
-  
-  -help: show the help message
-## Coverage calculation ##
-After assembly we map the reads of each sample back to the assembly using soap (http://soap.genomics.org.cn/). Of course, you can use other mapping software such as bowtie2. Then you can use soap.coverage (http://soap.genomics.org.cn/) to calculate base coverage. Finally, use Scripts/depth_mean_rawdepth.pl to calculate coverage file for -depthfile. There is one example in Scripts/example/. The first parameter for Scripts/depth_mean_rawdepth.pl is a file with format that [file path] and [trimmed length] separated by tab 
-Please note the trimmed length for both end is very similar to the read length of Illimula read. 
-
-## Generation of SCG table ##
-use Scripts/SCGtype_SCGscaffoldDepth.pl to generate SCG table for -tablefile. To do this, we also need to install two other softwares including FragGeneScan (http://omics.informatics.indiana.edu/FragGeneScan/) and hmmsearch (http://hmmer.janelia.org/). 
-
-## SeedBin output ##
-All output files are  in derectory defined by -outdir. There are 13 output files including:
-
-largeScaffoldSeed_CovInterval.xls
-This file contains large-scaffold seeds and their coverage intervals. The format is 
+## Documentation ##
+For comprehensive documentation for SeedBin, please read SeedBin Manual.pdf
 
 ## Support ##
 If you are having issues, please email me via zhouyizhuang3@163.com
