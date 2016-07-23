@@ -1,0 +1,55 @@
+Prepare depth file
+perl depth_mean_rawdepth.pl depth.list F1RT_mean_rawdepth.xls 500
+
+Prepare table file
+perl SCGtype_SCGscaffoldDepth.pl F1RT.fa F1RT_mean_rawdepth.xls ./ 500
+
+Running SeedBin
+perl SeedBin.pl -fafile F1RT.fa -depthfile F1RT_mean_rawdepth.xls -tablefile SCGtype_SCGscaffoldDepth.xls -seedfile seed.xls -outdir SeedBin
+Note:  1) depth values of different samples are separated by "#". The first value of depths (coverage) in --depthfile for each sample is the mean coverage across whole sequences; 
+	2) results are in directory SeedBin
+
+Running MaxBin (using version 1.4.5)
+perl run_MaxBin.pl	-contig	F1RT.fa -out MaxBin -abund F1RT_MaxBin.depth -min_contig_length 500
+
+Running MaxBin2 (using version 2.2)
+perl run_MaxBin.pl -contig F1RT.fa	-out MaxBin -abund F1RT_MaxBin.depth -min_contig_length 500
+
+Running CONCOCT (using version 0.4.0)
+1) cut up scaffold
+cut_up_fasta.py -c 10000 -o 0 F1RT.fa >F1RT_cut.fa
+2) calculate coverage for cut scaffolds
+perl depth_cut.pl F1RT.fa F1RT_cut.fa F1RT.depth F1RT_cut.depth
+3) run concoct
+concoct --composition_file F1RT_cut.fa --coverage_file F1RT_cut.depth -l 0
+
+Running MetaBAT (using version 0.25.4)
+
+# specific mode
+metabat -i F1RT.fa -a F1RT_MetaBAT.depth -o <base file name> --sensitive -l 
+
+# verysensitive mode
+metabat -i F1RT.fa -a F1RT_MetaBAT.depth -o <base file name> --verysensitive -l
+
+# superspecific mode
+metabat -i F1RT.fa -a F1RT_MetaBAT.depth -o <base file name> --superspecific -l
+
+
+Binning performance evaluation
+1. Pool four draft genomes together to form a new file FC2357.fa
+
+2. Perform alignment
+perl genomealign_sortbyr.pl FC2357.fa F1RT.fa F1RT_FC2357 
+
+3. Determine the origins of all metagenomic scaffolds based on F1RT_FC2357.coords and their coverage. The result is in F1RT_allscaffold_origin.xls
+
+4. Performance evaluation
+perl F1RT_performance_evaluation.pl F1RT_allscaffold_source.xls classified_allscaffold.xls 0 <output1> <output2> <output3>
+<output1> for detailed information
+<output2> for summarized information
+<output3> for log information
+
+Before using this scripts, you must generate the file named classified_allscaffold.xls here. This file defines the clustering result using format as follows:
+scaffold<tab>bin<tab>length<tab>depth (at least four columns are required)
+
+
