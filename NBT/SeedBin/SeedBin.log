@@ -1,0 +1,36 @@
+2016-04-30 04:26:12: Start to conduct /processing_data/zhouyzh/binning/DB/bin/SeedBin_differentalCov_v28.pl......
+2016-04-30 04:26:48: Mean SD ratio of Sample1	0.17	0.22
+2016-04-30 04:26:48: Mean SD ratio of Sample2	0.27	0.32
+2016-04-30 04:26:51: The number of all scaffolds with length >=10kb: 3999
+2016-04-30 04:26:51: The number of all scaffolds with length <10kb: 129124
+2016-04-30 04:26:51: The number of SCG scaffolds with length >=10kb: 716
+2016-04-30 04:26:51: The number of SCG scaffolds with length <10kb: 3765
+2016-04-30 04:26:51: The number of Non-SCG scaffolds with length >=10kb: 3283
+2016-04-30 04:26:51: The number of Non-SCG scaffolds with length <10kb: 125359
+2016-04-30 04:26:51: Start to obtain seeds of large scaffolds
+2016-04-30 04:34:44: Number of seeds from large scaffolds: 257
+2016-04-30 04:34:44: Produce /processing_data/zhouyzh/binning/DB/F1RT_NBT/NBT/initialSeed/SeedBin_diffCov_v28/largeScaffoldSeed_CovInterval.xls
+2016-04-30 04:35:27: Number of seeds from large scaffolds with only composition: 399
+2016-04-30 13:51:47: Number of seeds from all scaffolds with only composition: 679
+2016-04-30 20:23:54: The number of all seeds is 827
+2016-04-30 20:24:04: Produce /processing_data/zhouyzh/binning/DB/F1RT_NBT/NBT/initialSeed/SeedBin_diffCov_v28/allscaffoldSeed_CovInterval.xls
+2016-04-30 20:24:04: Start to classify large scaffolds
+2016-04-30 20:27:03: Start to classify small scaffolds
+2016-05-01 21:17:52: Produce /processing_data/zhouyzh/binning/DB/F1RT_NBT/NBT/initialSeed/SeedBin_diffCov_v28/allscaffold_RawClassified.xls
+2016-05-01 21:17:53: Produce /processing_data/zhouyzh/binning/DB/F1RT_NBT/NBT/initialSeed/SeedBin_diffCov_v28/SCGscaffold_RawClassified.xls
+2016-05-01 21:17:53: Start to split seeds
+2016-05-01 22:22:19: The number of seeds after splitting seeds: 866
+2016-05-01 22:22:21: Produce /processing_data/zhouyzh/binning/DB/F1RT_NBT/NBT/initialSeed/SeedBin_diffCov_v28/allscaffoldSeed_ClassifiedLength_AfterSplit.xls
+2016-05-01 22:22:21: Produce /processing_data/zhouyzh/binning/DB/F1RT_NBT/NBT/initialSeed/SeedBin_diffCov_v28/SCGscaffold_AfterSplit.xls
+2016-05-01 22:22:21: The number of seeds after filtering small bins: 376
+2016-05-01 23:12:39: The number of seeds after merging seeds at the first time: 166
+2016-05-01 23:12:39: Produce /processing_data/zhouyzh/binning/DB/F1RT_NBT/NBT/initialSeed/SeedBin_diffCov_v28/SCGscaffold_AfterMerge_FirstTime.xls
+2016-05-01 23:21:09: The number of seeds after merging seeds at the second time: 102
+2016-05-01 23:21:09: Produce /processing_data/zhouyzh/binning/DB/F1RT_NBT/NBT/initialSeed/SeedBin_diffCov_v28/SCGscaffold_AfterMerge_SecondTime.xls
+2016-05-01 23:21:09: Produce /processing_data/zhouyzh/binning/DB/F1RT_NBT/NBT/initialSeed/SeedBin_diffCov_v28/allscaffoldSeed_ClassifiedLength_Final.xls
+2016-05-01 23:21:09: The number of seeds after filtering small bins is 101
+2016-05-01 23:27:03: Produce /processing_data/zhouyzh/binning/DB/F1RT_NBT/NBT/initialSeed/SeedBin_diffCov_v28/SCGscaffold_FinalClassified.xls
+2016-05-01 23:27:12: Produce /processing_data/zhouyzh/binning/DB/F1RT_NBT/NBT/initialSeed/SeedBin_diffCov_v28/FinalSeed_CovInterval.xls
+2016-05-01 23:29:59: Start to reclassify large scaffolds
+2016-05-01 23:30:32: Start to reclassify small scaffolds
+2016-05-02 01:02:47: Produce /processing_data/zhouyzh/binning/DB/F1RT_NBT/NBT/initialSeed/SeedBin_diffCov_v28/classified_allscaffold.xls
