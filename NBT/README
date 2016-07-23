@@ -1,0 +1,56 @@
+Prepare depth file
+perl depth_mean_rawdepth.pl depth.list NBT_mean_rawdepth.xls 1000 
+
+Prepare table file
+perl SCGtype_SCGscaffoldDepth.pl APMI01.1.fsa NBT_mean_rawdepth.xls ./ 1000
+
+Running SeedBin
+perl SeedBin.pl -fafile APMI01.1.fsa -depthfile NBT_mean_rawdepth.xls -tablefile SCGtype_SCGscaffoldDepth.xls -outdir SeedBin/ -seedfile seed.xls -minlen 1000 -SmallLen 200000
+Note:  1) depth values of different samples are separated by "#". The first value of depths (coverage) in --depthfile for each sample is the mean coverage across whole sequences; 
+	2) results are in directory SeedBin
+
+Running MaxBin (using version 1.4.5)
+perl run_MaxBin.pl	-contig	APMI01.1.fsa -out MaxBin -abund NBT_MaxBin.depth
+
+Running MaxBin2 (using version 2.2)
+perl run_MaxBin.pl -contig APMI01.1.fsa	-out MaxBin -abund NBT_MaxBin2.depth1 -abund2 NBT_MaxBin2.depth2
+
+Running CONCOCT (using version 0.4.0)
+1) cut up scaffold 
+cut_up_fasta.py -c 10000 -o 0 APMI01.1.fsa >NBT_cut.fa
+2) calculate coverage  for cut scaffolds
+perl depth_cut.pl APMI01.1.fsa NBT_cut.fa HP-.depth HP-_cut.depth
+perl depth_cut.pl APMI01.1.fsa NBT_cut.fa HP+.depth HP+_cut.depth
+3) pool together HP-_cut.depth and HP+_cut.depth
+perl pool_depth.pl HP-_cut.depth HP+_cut.depth NBT_cut.depth
+4) run concot
+concoct --composition_file NBT_cut.fa --coverage_file NBT_cut.depth -l 1000
+
+Running MetaBAT (using version 0.25.4)
+
+# specific mode
+metabat -i APMI01.1.fsa -a NBT_MetaBAT.depth -o <base file name> --sensitive -l 
+
+# verysensitive mode
+metabat -i APMI01.1.fsa -a NBT_MetaBAT.depth -o <base file name> --verysensitive -l
+
+# superspecific mode
+metabat -i APMI01.1.fsa -a NBT_MetaBAT.depth -o <base file name> --superspecific -l
+
+
+Binning performance evaluation
+1. performe alignment
+perl genomealign_sortbyr.pl CP005957.fasta APMI01.1.fsa CP005957_AMPI01 
+
+2. filter alignment
+perl coords_filter.pl CP005957_AMPI01.coords CP005957_AMPI01.coords.filter CP005957_AMPI01.coords.remain
+
+3. calculate IPI based on CP005957
+perl NBT_IPI.pl classified_allscaffold.xls CP005957_AMPI01.coords.filter <output1> <output2>
+<output1> for detailed information
+<output2> for summarized information
+
+Before using this scripts, you must generate the file named classified_allscaffold.xls here. This file defines the clustering result using format as follows:
+scaffold<tab>bin<tab>length<tab>depth (at least four columns are required)
+
+
