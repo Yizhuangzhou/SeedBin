@@ -1,0 +1,32 @@
+2016-04-26 13:06:12: Start to conduct /processing_data/zhouyzh/binning/DB/bin/SeedBin_differentalCov_v28.pl......
+2016-04-26 13:06:39: Mean SD ratio of Sample1	0.05	0.06
+2016-04-26 13:06:41: The number of all scaffolds with length >=10kb: 8589
+2016-04-26 13:06:41: The number of all scaffolds with length <10kb: 22770
+2016-04-26 13:06:41: The number of SCG scaffolds with length >=10kb: 2281
+2016-04-26 13:06:41: The number of SCG scaffolds with length <10kb: 1458
+2016-04-26 13:06:41: The number of Non-SCG scaffolds with length >=10kb: 6308
+2016-04-26 13:06:41: The number of Non-SCG scaffolds with length <10kb: 21312
+2016-04-26 13:06:41: Start to obtain seeds of large scaffolds
+2016-04-26 13:17:58: Number of seeds from large scaffolds: 200
+2016-04-26 13:17:58: Produce /processing_data/zhouyzh/binning/DB/MaxBin/simHC/SCG/SeedBin_diffCov_v28/largeScaffoldSeed_CovInterval.xls
+2016-04-26 13:20:05: Number of seeds from large scaffolds with only composition: 404
+2016-04-26 15:10:54: Number of seeds from all scaffolds with only composition: 434
+2016-04-26 15:28:25: The number of all seeds is 327
+2016-04-26 15:28:26: Produce /processing_data/zhouyzh/binning/DB/MaxBin/simHC/SCG/SeedBin_diffCov_v28/allscaffoldSeed_CovInterval.xls
+2016-04-26 15:28:26: Start to classify large scaffolds
+2016-04-26 16:56:53: Produce /processing_data/zhouyzh/binning/DB/MaxBin/simHC/SCG/SeedBin_diffCov_v28/allscaffold_RawClassified.xls
+2016-04-26 16:56:53: Produce /processing_data/zhouyzh/binning/DB/MaxBin/simHC/SCG/SeedBin_diffCov_v28/SCGscaffold_RawClassified.xls
+2016-04-26 16:56:53: Start to split seeds
+2016-04-26 17:11:45: The number of seeds after splitting seeds: 367
+2016-04-26 17:11:46: Produce /processing_data/zhouyzh/binning/DB/MaxBin/simHC/SCG/SeedBin_diffCov_v28/allscaffoldSeed_ClassifiedLength_AfterSplit.xls
+2016-04-26 17:11:46: Produce /processing_data/zhouyzh/binning/DB/MaxBin/simHC/SCG/SeedBin_diffCov_v28/SCGscaffold_AfterSplit.xls
+2016-04-26 17:11:46: The number of seeds after filtering small bins: 243
+2016-04-26 17:32:56: The number of seeds after merging seeds at the first time: 161
+2016-04-26 17:32:56: Produce /processing_data/zhouyzh/binning/DB/MaxBin/simHC/SCG/SeedBin_diffCov_v28/SCGscaffold_AfterMerge_FirstTime.xls
+2016-04-26 17:43:43: The number of seeds after merging seeds at the second time: 108
+2016-04-26 17:43:43: Produce /processing_data/zhouyzh/binning/DB/MaxBin/simHC/SCG/SeedBin_diffCov_v28/SCGscaffold_AfterMerge_SecondTime.xls
+2016-04-26 17:43:43: Produce /processing_data/zhouyzh/binning/DB/MaxBin/simHC/SCG/SeedBin_diffCov_v28/allscaffoldSeed_ClassifiedLength_Final.xls
+2016-04-26 17:43:43: The number of seeds after filtering small bins is 107
+2016-04-26 17:49:39: Produce /processing_data/zhouyzh/binning/DB/MaxBin/simHC/SCG/SeedBin_diffCov_v28/SCGscaffold_FinalClassified.xls
+2016-04-26 17:49:40: Produce /processing_data/zhouyzh/binning/DB/MaxBin/simHC/SCG/SeedBin_diffCov_v28/FinalSeed_CovInterval.xls
+2016-04-26 18:14:46: Produce /processing_data/zhouyzh/binning/DB/MaxBin/simHC/SCG/SeedBin_diffCov_v28/classified_allscaffold.xls
