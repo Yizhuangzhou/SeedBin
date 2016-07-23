@@ -38,10 +38,10 @@ threads::shared
 
 POSIX
 
-The above packages are needed be installed in order to run SeedBin. They can downloaded from http://www.cpan.org/. Please note that Statistics packages are included in the same directory of SeedBin. 
+The above packages are needed be installed in order to run SeedBin.pl. They can downloaded from http://www.cpan.org/. Please note that Statistics packages are included in the same directory of SeedBin. 
 
 ## Cutoffs for seeding and mergeing ##
-The file named cutoff.xls must be localized at the same directory of SeedBin. it contains the cutoffs for seeding and merging.
+The file named cutoff.xls must be localized at the same directory of SeedBin.pl. it contains the cutoffs for seeding and merging.
 
 ## Usage ##
 The following arguments must be provided:
@@ -79,6 +79,12 @@ Please note the trimmed length for both end is very similar to the read length o
 
 ## Generation of SCG table ##
 use Scripts/SCGtype_SCGscaffoldDepth.pl to generate SCG table for -tablefile. To do this, we also need to install two other softwares including FragGeneScan (http://omics.informatics.indiana.edu/FragGeneScan/) and hmmsearch (http://hmmer.janelia.org/). 
+
+## SeedBin output ##
+All output files are  in derectory defined by -outdir. There are 13 output files including:
+
+largeScaffoldSeed_CovInterval.xls
+This file contains large-scaffold seeds and their coverage intervals. The format is 
 
 ## Support ##
 If you are having issues, please email me via zhouyizhuang3@163.com
